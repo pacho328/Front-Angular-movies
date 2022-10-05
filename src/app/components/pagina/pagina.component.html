@@ -1,0 +1,14 @@
+<app-slider [nombretext]="'HOME'"></app-slider>
+
+<div class="center">
+  <section id="content">
+<div *ngIf="nombre" >
+<p>pagina de {{nombre}}</p>
+</div>
+<div *ngIf="!nombre" >
+    <p>pagina de anonima</p>
+</div>
+<button (click) ="redireccion()"> clik</button>
+</section>
+<app-sidebar></app-sidebar>
+</div>

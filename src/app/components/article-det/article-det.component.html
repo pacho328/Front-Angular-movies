@@ -1,0 +1,20 @@
+
+<div class="center">
+  <section id="content">
+    <article class="article-item article-detail">
+        <div class="image-wrap">
+            <img src="https://unhabitatmejor.leroymerlin.es/sites/default/files/styles/header_category/public/2018-10/4%20paisaje%20macedonia.jpg?itok=AELknmF8" alt="Paisaje" />
+        </div>
+          <!-- Solucion para TypeError: Cannot read property 'title' of undefined es el ? despues del objeto asi article?.date -->
+        <h1 class="subheader">{{articleDet?.title}}</h1>
+
+        <span>{{articleDet?.date | amLocale: 'es' | amTimeAgo}}</span>
+        <a [routerLink]="['/blog/editar',idArt]" class="btn btn-success" style="color: white; text-decoration: none;">Editar</a>
+        <a (click)="delele()" class="btn btn-warning" style="color: white; background-color:firebrick; text-decoration: none;">Borrar</a>
+        <div class="clearfix"></div>
+    </article>
+  </section>
+  <app-sidebar></app-sidebar>
+</div>
+
+
